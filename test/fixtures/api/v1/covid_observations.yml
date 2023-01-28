@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  SNo: 1
+  Observation_date: 2023-01-27
+  state: MyString
+  last_update: 2023-01-27 17:06:17
+  confirmed: 1
+  deaths: 1
+  recovered: 1
+
+two:
+  SNo: 1
+  Observation_date: 2023-01-27
+  state: MyString
+  last_update: 2023-01-27 17:06:17
+  confirmed: 1
+  deaths: 1
+  recovered: 1
