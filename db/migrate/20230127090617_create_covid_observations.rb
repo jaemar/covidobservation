@@ -7,5 +7,7 @@ class CreateCovidObservations < ActiveRecord::Migration[7.0]
       t.integer :deaths
       t.integer :recovered
     end
+
+		add_index :covid_observations, [:country, :observation_date], unique: true
   end
 end

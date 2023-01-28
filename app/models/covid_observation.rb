@@ -6,12 +6,17 @@ class CovidObservation < ApplicationRecord
 		where(observation_date: date).order('confirmed DESC') 
 	}
 
+	validates :country, uniqueness: { scope: :observation_date }
+
+
+	# Return all neccessary scoped attributes
+	def self.confirmed(date, count)
+		self.observation_date(date).top(count)
+	end
+
 	# This will insert all the data that's been processed and grouped base on ObservationDate and Country/Region
 	def self.import_data(path)
 		if self.table_exists?
-			# Delete all existing data to prevent conflicts
-			self.delete_all if self.table_exists?
-
 			# grouped all data by country
 			grouped = {}	
 			csv = CSV.read(path, headers: true)

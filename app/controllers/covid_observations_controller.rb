@@ -1,10 +1,11 @@
 class CovidObservationsController < ApplicationController
 
 	def confirmed
-		parsed_date = params[:observation_date] ? DateTime.parse(params[:observation_date]) : DateTime.now
-		confirmed = CovidObservation
-			.observation_date(parsed_date)
-			.top(params[:max_results] ? params[:max_results].to_i : 0)
+		date = params[:observation_date] ? 
+			DateTime.parse(params[:observation_date]) : DateTime.now
+		count = params[:max_results] ? params[:max_results] : 0
+		confirmed = CovidObservation.confirmed(date, count)
+
 		render json: {
 			observation_date: params[:observation_date],
 			countries: confirmed

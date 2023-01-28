@@ -17,6 +17,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_27_090617) do
     t.integer "confirmed"
     t.integer "deaths"
     t.integer "recovered"
+    t.index ["country", "observation_date"], name: "index_covid_observations_on_country_and_observation_date", unique: true
   end
 
 end
