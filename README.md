@@ -14,7 +14,7 @@
     ```
 - Go to project folder
     ```console
-    foo@bar:~$ cd covidoverstion
+    foo@bar:~$ cd covidobservation
     ```
 - Build app docker image
     ```console
