@@ -1,6 +1,7 @@
 # Covid Observation
 
-### System dependencies
+### System Requirements
+- Ubuntu OS
 - Ruby 3.1.1
 - Rails 7.0.4
 - SQLite3
