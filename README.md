@@ -1,10 +1,10 @@
 # Covid Observation
 
 ### System dependencies
-Ruby 3.1.1
-Rails 7.0.4
-SQLite3
-Docker
+- Ruby 3.1.1
+- Rails 7.0.4
+- SQLite3
+- Docker
 
 ### Instruction
 - Install [Docker](https://www.docker.com/)
